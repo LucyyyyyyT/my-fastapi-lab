@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>All Messages</h2>
+<img src="/static/image.png" alt="Site banner" width="300">
+
+{% for msg in messages %}
+<div class="message">
+    <p><strong>{{ msg.username }}</strong> (age {{ msg.age }}) — {{ msg.created_at }}</p>
+    <p>{{ msg.text }}</p>
+</div>
+{% endfor %}
+{% endblock %}
